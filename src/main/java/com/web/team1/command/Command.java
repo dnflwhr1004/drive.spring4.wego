@@ -15,7 +15,7 @@ public class Command implements Order {
 
 		public void execute() {
 			this.view = String.format(Constants.DOUBLE_PATH,"facade", "main");
-			System.out.println("커멘드뷰" + view);
+			System.out.println("커멘드뷰..." + view);
 	}
 // 커멘드으
 }
