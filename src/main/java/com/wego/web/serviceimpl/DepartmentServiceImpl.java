@@ -7,7 +7,7 @@ import com.wego.web.services.DepartmentService;
 
 @Service
 public class DepartmentServiceImpl implements DepartmentService{
-	@Autowired 	DepartmentMapper mapper;
+	@Autowired 	DepartmentMapper departmentMapper;
 	
 	
 	@Override
