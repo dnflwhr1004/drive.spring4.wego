@@ -4,10 +4,27 @@ import java.io.Serializable;
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
-@Data @Component
-public class UserDTO implements Serializable {
+ @Component
+public class UserDTO {
 
-	private static final long serialVersionUID = 1L;
+	
 
-	private String user_id, user_pw, user_name, user_birth, user_sex, user_tel, pet_type;  
+	private String uid, pwd, uname, birth, gender, tel, pettype;
+
+	public String getUid() {
+		return uid;
+	}
+
+	public void setUid(String uid) {
+		this.uid = uid;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}  
+	
 }
