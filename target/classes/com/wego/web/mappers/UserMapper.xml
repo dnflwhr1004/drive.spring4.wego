@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.wego.web.mappers.UserMapper">
+    <resultMap type="com.wego.web.domains.UserDTO" id="USER">
+        <id column="uid" property="uid"/>
+        <result column="UID" property="uid"/>
+        <result column="PWD" property="pwd"/>
+		<result column="UNAME" property="uname"/>     
+    </resultMap>
+
+    <select id="selectUserById" parameterType="com.wego.web.domains.UserDTO" resultMap="USER">
+        SELECT * FROM USER WHERE UID LIKE #{uid}
+    </select>
+  
+    <insert id="insertUser" parameterType="com.wego.web.domains.UserDTO">
+        insert into user (UID,PWD,UNAME)
+        values(#{uid},#{pwd},#{uname})
+    </insert>
+
+</mapper>
